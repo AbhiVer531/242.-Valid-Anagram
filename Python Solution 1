@@ -1,0 +1,15 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        
+        mymap = {}
+        mymap2 = {}
+        
+        for i in s:
+            mymap[i] = mymap.get(i, 0) + 1
+            
+        for j in t:
+            mymap2[j] = mymap2.get(j, 0) + 1
+            
+        return mymap == mymap2
